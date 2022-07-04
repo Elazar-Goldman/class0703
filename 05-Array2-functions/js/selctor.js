@@ -20,12 +20,26 @@ let under = document.getElementById("under-div");
 under.innerHTML = "<ul>";
 under.innerHTML += '<li class="frot">Orange </li>';
 under.innerHTML += "<li class='frot'>Mango</li>";
-under.innerHTML += "<li class=\"frot\">Apple</li>";
+under.innerHTML += '<li class="frot">Apple</li>';
 under.innerHTML += "<li>Lemon</li>";
 under.innerHTML += "<li>Tomato</li>";
 under.innerHTML += "<li>" + frot + "</li>";
 under.innerHTML += "</ul>";
 
-let myCars = ["BMW", "Mazda", "Fiat", "Audi"]
+let myCars = ["BMW", "Mazda", "Fiat", "Audi"];
 
-let myColor = ["hotPink", "red", "blue", "green"]
+let myColor = ["hotPink", "red", "blue", "green"];
+
+let myList = document.getElementById("main-div");
+
+myList.innerHTML = "<ul id='my-list'>";
+for (let x = 0; x < myCars.length; x++) {
+  myList.innerHTML += '<li class="my-car">' + myCars[x] + "</li>";
+}
+myList.innerHTML += "</ul>";
+
+let carColor = document.getElementsByClassName("my-car");
+
+for (let x = 0; x < carColor.length; x++) {
+  carColor[x].style.backgroundColor = myColor[x];
+}
