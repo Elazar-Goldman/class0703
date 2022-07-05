@@ -43,3 +43,10 @@ let carColor = document.getElementsByClassName("my-car");
 for (let x = 0; x < carColor.length; x++) {
   carColor[x].style.backgroundColor = myColor[x];
 }
+
+let final = document.getElementById("final-div");
+final.innerHTML = "<ul id='my-list'>";
+for (let x = 0; x < myCars.length; x++) {
+  final.innerHTML += '<li class="final-car">' + myCars[x] + "</li>";
+}
+final.innerHTML += "</ul>";
