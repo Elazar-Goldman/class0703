@@ -4,6 +4,8 @@
 let myTitle = document.getElementById("title");
 let myBtn = document.getElementById("btn");
 let span = document.getElementById("inner-span");
+// some devlopers dont like to use the same name
+let colorBtn = document.getElementById("color-btn");
 
 // Function recives permiters
 
@@ -48,4 +50,19 @@ function makeNum() {
   span.innerHTML = randNum;
 }
 
+function randColor() {
+    
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let a = Math.random();
 
+  return "rgba(" + r + "," + g + "," + b + "," + a + ")";
+}
+
+function changeRandColor() {
+  let bgColor = randColor();
+
+  colorBtn.style.backgroundColor = bgColor;
+  colorBtn.style.color = randColor();
+}
