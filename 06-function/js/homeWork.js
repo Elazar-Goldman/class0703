@@ -1,7 +1,7 @@
 let elem = document.getElementById("root");
 
 for (let x = 9; x > 0; x--) {
-    
+    // this was responsable for making the row go down
   if (x % 3 === 0) {
     elem.innerHTML += '<div class="inner-div"></div>';
   }
