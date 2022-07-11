@@ -33,4 +33,4 @@ function cacl(num1, num2) {
    num1 + num2;
 }
 
-let res = cacl();
+let res = cacl(23,23);
