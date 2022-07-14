@@ -25,7 +25,6 @@ function addVipItem() {
 }
 
 function mark(listItem) {
-  
   listItem.style.textDecoration = "line-through";
 }
 
