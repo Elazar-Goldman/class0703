@@ -1,0 +1,6 @@
+body{
+    transition: background-color 2s;
+}
+div.container{
+    transition: background-color 2s;
+}

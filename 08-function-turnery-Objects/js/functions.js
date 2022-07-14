@@ -45,3 +45,5 @@ function getColor() {
 function changeColor(color = "aqua") {
   document.body.style.backgroundColor = color;
 }
+
+console.log(typeof getColor);
