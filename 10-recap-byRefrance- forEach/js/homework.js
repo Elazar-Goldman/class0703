@@ -8,7 +8,7 @@ let building = [
   },
   {
     name: "Cohen hous",
-    room: {},
+    rooms: {},
     numPeople: 3,
   },
   {},
