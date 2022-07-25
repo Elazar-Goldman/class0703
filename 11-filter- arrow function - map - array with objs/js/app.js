@@ -137,4 +137,51 @@ allAges.forEach((singleDiv) => {
   singleDiv.style.backgroundColor = makeColor();
   singleDiv.style.color = makeColor();
 });
+let fakeStuds = [
+  { name: "Eli", subject: "FullStack", grade: "34" },
+  { name: "Mosh", subject: "FullStack", grade: "76" },
+  { name: "Rina", subject: "FullStack", grade: "89" },
+  { name: "Asam", subject: "FullStack", grade: "90" },
+  { name: "Yoni", subject: "FullStack", grade: "70" },
+];
 
+let ourStudents = [];
+let iName = document.getElementById("name");
+let iSub = document.getElementById("subject");
+let iGrade = document.getElementById("grade");
+
+let getVals = () => {
+  let sName = iName.value;
+  let sSub = iSub.value;
+  let sGrade = iGrade.value;
+
+  let obj = {
+    name: sName,
+    subject: sSub,
+    grade: sGrade,
+  };
+
+  ourStudents.push(obj);
+  iName.value = "";
+  iSub.value = "";
+  iGrade.value = "";
+};
+// this is what the user is putting in the input
+let mGrade = document.getElementById("minGrade");
+
+let studDis = document.getElementById("dispaly");
+let displayStuds = () => {
+  let selectStuds = fakeStuds.filter((stud) => stud.grade > mGrade.value);
+
+  console.log(selectStuds);
+
+  selectStuds.map((item) => {
+    studDis.innerHTML += `
+  <div>
+  <div>Studens name is : ${item.name}</div>
+  <div>Studens subject is : ${item.subject}</div>
+  <div>Studens grade is : ${item.grade}</div>
+</div>
+  `;
+  });
+};
