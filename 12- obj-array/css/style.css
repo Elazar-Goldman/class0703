@@ -1,0 +1,23 @@
+.red{
+    background-color: red;
+    color:aquamarine;
+    transition: opacity 3; 
+}
+
+.yellow{
+    background-color: yellow;
+    color: lightgreen;
+}
+
+.no-disp{
+    opacity: 0%;
+   
+}
+
+#small{
+    width: 50vw;
+    background-color: blueviolet;
+    border: 1px dotted greenyellow;
+  
+    
+}

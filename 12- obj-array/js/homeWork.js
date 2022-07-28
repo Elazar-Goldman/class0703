@@ -1,7 +1,5 @@
 import { vipArr, ChangeColor } from "./vipJson.js";
 
-console.log(vipArr);
-
 let elem = document.querySelector("#root");
 let myTitle = document.querySelector("h1");
 
@@ -28,18 +26,46 @@ myBtn.id = "btn-id";
 
 console.log(myInput);
 
-vipArr.map((vip) => {
-  newElem.innerHTML += `
-    <div class="vip-div">
-    <h3>name is: ${vip.name}</h3>
-    <div>worth is : ${vip["worth"]}</div>
-    <img src="${vip["image"]}" alt="${vip.name}">
-    </div>
-    `;
+const renderVip = (arr) => {
+  newElem.innerHTML = "";
+  arr.map((vip) => {
+    newElem.innerHTML += `
+        <div class="vip-div">
+        <h3>name is: ${vip.name}</h3>
+        <div>worth is : ${vip["worth"]}</div>
+        <img src="${vip["image"]}" alt="${vip.name}">
+        </div>
+        `;
+  });
+};
+
+renderVip(vipArr);
+
+let myH3 = document.querySelectorAll("h3");
+console.dir(myH3[0]);
+
+myH3[0].className = "red";
+
+myH3[1].id = "small";
+
+myH3[2].addEventListener("click", () => {
+  myH3[0].classList.toggle("no-disp");
 });
 
 myBtn.addEventListener("click", () => {
-  console.log("Hello");
+  let val = parseInt(myInput.value);
+  console.log(val);
+
+  let veryVip = vipArr.filter((vip) => {
+    let indexB = vip.worth.indexOf("B");
+    let vipWorth = parseInt(vip.worth.substring(1, indexB));
+
+    return vipWorth > val;
+  });
+
+  console.log(veryVip);
+  renderVip(veryVip);
+  myInput.value = "";
 });
 
 myTitle.addEventListener("mouseover", () => {
