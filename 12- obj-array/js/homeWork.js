@@ -1,8 +1,9 @@
-import { vipArr } from "./vipJson.js";
+import { vipArr, ChangeColor } from "./vipJson.js";
 
 console.log(vipArr);
 
 let elem = document.querySelector("#root");
+let myTitle = document.querySelector("h1");
 
 console.log(elem);
 // create elemnt is to create an elment
@@ -11,6 +12,7 @@ let myInput = document.createElement("input");
 let newElem = document.createElement("div");
 // set attribute genarates and attrabute
 myInput.setAttribute("type", "number");
+
 let myBtn = document.createElement("button");
 
 myBtn.textContent = "click me";
@@ -38,6 +40,13 @@ vipArr.map((vip) => {
 
 myBtn.addEventListener("click", () => {
   console.log("Hello");
+});
+
+myTitle.addEventListener("mouseover", () => {
+  myTitle.style.backgroundColor = ChangeColor();
+});
+myTitle.addEventListener("mouseout", () => {
+  myTitle.style.backgroundColor = "";
 });
 
 // let richPep = document.querySelectorAll(".vip-div");

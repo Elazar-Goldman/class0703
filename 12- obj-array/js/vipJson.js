@@ -45,3 +45,12 @@ export let vipArr = [
       "https://specials-images.forbesimg.com/imageserve/58c1d278a7ea431f321add1f/200x200.jpg?background=000000&cropX1=0&cropX2=744&cropY1=40&cropY2=784",
   },
 ];
+
+export const ChangeColor = () => {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let a = Math.random();
+
+  return `rgba(${r},${g},${b},${a})`;
+};
