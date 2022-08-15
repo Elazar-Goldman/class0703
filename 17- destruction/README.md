@@ -13,3 +13,11 @@
 - while 
 
 - 
+
+## you have a object
+
+- please destructure out the name and img
+
+- destrocture the worth but please call it  value. 
+
+- and add his favourt food

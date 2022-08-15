@@ -1,0 +1,8 @@
+div.errMsg{
+    color: red;
+}
+
+h1.active{
+    color: hotpink;
+    background-color: aqua;
+}
