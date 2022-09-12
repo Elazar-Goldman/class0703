@@ -1,0 +1,35 @@
+{
+"pages" : {
+    "/users" : [
+        {"id":1340703897, "name":"David", "email":"david@gmail.com"},
+        {"id":234985789, "name":"Laura", "email":"laura@gmail.com"},
+        {"id":34058743, "name":"Rahim", "mail":"rahim@gmail.com"}
+], 
+"/user/1340703897":{
+    "userName":"David the Great",
+    "postTitle":"Do it yourself kitchen",
+    "postId": [101,105,349],
+    "followers": 100,
+    "city":"Ramat Gan"
+},
+"/user/234985789":{
+    "userName":"Laura the elegant",
+    "postTitle":"Running classes",
+    "postId": 202,
+    "followers": 400,
+    "city":"Jerusalem"
+
+},
+"/post/101":{
+    "title":"Do it yourself kitchen",
+    "content":"How to build your very own kitchen",
+    "like":200
+},
+"/post/202":{
+    "title":"How to run 10Km",
+    "contant":"How do you go from couch potato, to running master",
+    "like":400
+}
+}
+
+}

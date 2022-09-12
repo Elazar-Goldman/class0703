@@ -41,3 +41,30 @@ let changeColor = (color, time) => {
 // };
 // calc(10, 5); // 15
 
+let makeColor = async () => {
+  await changeColor("red", 1000);
+  await changeColor("green", 1000);
+  await changeColor("blue", 1000);
+  await changeColor("yellow", 1000);
+  await changeColor("green", 1000);
+  await changeColor("pink", 1000);
+  await changeColor("red", 1000);
+};
+
+makeColor();
+
+let myCalc = async (num, num2) => {
+  return num + num2;
+};
+
+setTimeout(() => {
+  console.log("in set time out");
+}, 0);
+
+myCalc(2, 3)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log("That didnt work");
+  });
