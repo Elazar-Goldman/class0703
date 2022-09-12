@@ -15,7 +15,7 @@
 "/user/234985789":{
     "userName":"Laura the elegant",
     "postTitle":"Running classes",
-    "postId": 202,
+    "postId": [202,324,345,5634],
     "followers": 400,
     "city":"Jerusalem"
 

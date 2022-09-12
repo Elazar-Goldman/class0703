@@ -1,6 +1,7 @@
 let url = "../js/pageObj.json";
 let webPages = "";
 
+// brings data to my project
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
@@ -11,12 +12,11 @@ fetch(url)
 
 // make a function to take out the data
 
-let objMaker = (pageJson) => {
-  console.log(pageJson);
-  webPages = pageJson;
+let objMaker = (pageObj) => {
+  console.log(pageObj);
+  webPages = pageObj
 };
 
-console.log(webPages);
 
 const fakeApi = (url) => {
   return new Promise((res, rej) => {
@@ -32,16 +32,17 @@ const fakeApi = (url) => {
   });
 };
 
+
 fakeApi("/users")
   .then((data) => {
     console.log(data);
     // data is giving us an array with obj
     //lets single out David
     let wanted = data.filter((author) => {
-      return author.name === "David";
+      return author.name === "David" ;
     });
     let wantedId = wanted[0].id;
-    // this is for chaning promises 
+    // this is for chaning promises
     return fakeApi(`/user/${wantedId}`);
   })
   .then((data) => {
