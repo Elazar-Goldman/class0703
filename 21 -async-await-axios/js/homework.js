@@ -54,19 +54,39 @@ const fakeApi = (url) => {
 };
 
 let findData = async () => {
-  let users = await fakeApi("/users");
-  console.log(users);
-  // destuc\turing of araay
-  let [david, Tamar, Karim] = users;
-  let tamar = users[1];
-  console.log(david);
-  let chosenOne = users.filter((item) => item.name === "David");
-  //destructioring - taking out id, change name on the right hand side of the :
-  let { id: userId } = chosenOne[0];
-  console.log(userId);
+  try {
+    let users = await fakeApi("/users");
+    console.log(users);
+    // destuc\turing of araay
+    let [david, Laura, Karim] = users;
+    let jsonLaura = JSON.stringify(Laura);
+    let newLaura = JSON.parse(jsonLaura);
 
-  let userInfo = await fakeApi(`/user/${userId}`);
-  let [chosenPost] = userInfo.postId;
-  let thePost = await fakeApi(`/post/${chosenPost}`);
-  console.log(thePost);
+    newLaura.email = "laura.pizza@gmail.yammy.com";
+    console.log(newLaura);
+    console.log(webPages.pages["/users"][1]);
+    // let tamar = users[1];
+    console.log(david);
+    let chosenOne = users.filter((item) => item.name === "David");
+    //destructioring - taking out id, change name on the right hand side of the :
+    let { id: userId } = chosenOne[0];
+    console.log(userId);
+
+    try {
+      let userInfo = await fakeApi(`/user/${userId}`);
+      let [chosenPost] = userInfo.postId;
+      try {
+        let thePost = await fakeApi(`/post/${chosenPost}`);
+
+        console.log(thePost);
+      } catch {
+        console.log("ooohhohoooho something didnt work Post");
+      }
+    } catch {
+      console.log("ooohhohoooho something didnt work userId");
+    }
+  } catch {
+    console.log("ooohhohoooho something didnt work user call");
+  }
+  console.log("after catch");
 };
