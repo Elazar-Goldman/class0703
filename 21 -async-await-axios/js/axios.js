@@ -7,7 +7,6 @@ let doApi = async () => {
 
   let myData = await axios({
     method: "get",
-
     url: url2,
   });
 
