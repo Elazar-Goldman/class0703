@@ -1,8 +1,7 @@
 let url = "https://dad-jokes.p.rapidapi.com/random/joke";
 const BASE_URL = "https://dad-jokes.p.rapidapi.com/";
 let headers = {
-  "X-RapidAPI-Key": "919db76066mshf08a00faa8e7aefp1c8d97jsn88057ed89e90",
-  "X-RapidAPI-Host": "dad-jokes.p.rapidapi.com",
+
 };
 let jokeId = "60dd35badf9cadd655935e07";
 
