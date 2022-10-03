@@ -1,0 +1,16 @@
+{
+  "name": "02-ts-class",
+  "version": "1.0.0",
+  "description": "- the function will return the sum of both numbers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
