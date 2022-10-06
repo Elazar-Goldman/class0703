@@ -15,3 +15,19 @@
 - open seconed terminal
 
 - tsc ./js/app.ts -w
+
+- no need to upload node-modules
+ 
+ ## TS class
+
+ - make a new propity that is a privte propity
+
+ - change the propities value
+
+ - challange
+
+ - make the addSubject method a privte method. 
+
+ - Inorder to add a subject . the user needs to eneter a correct password
+
+ - the pw 070322
